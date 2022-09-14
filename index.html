@@ -5,16 +5,470 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Challenge</title>
 </head>
 
 <body>
     <header class="title">
-        <h1>Challenge 1</h1>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Filters</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-filter">
+                            <div class="box-price">
+                                <h2>Price range</h2>
+                                <span>
+                                    The average price for a night
+                                </span>
+                                <img>
+                                <div class="price-min-max">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="$">
+                                        <label for="floatingInput">min price</label>
+                                    </div>
+                                    <div class="divider">_</div>
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="$">
+                                        <label for="floatingInput">max price</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-only"></div>
+                            <div class="box-stay">
+                                <h2>Type of accommodation</h2>
+                                <div>
+                                    <div class="form-check">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="total-accomodation"
+                                                name="checked-accomodation" id="checked-accomodation">
+                                            <label class="form-check-label" for="checked-accomodation">
+                                                Total accommodation
+                                            </label>
+                                        </div>
+                                        <p>
+                                            A whole accommodation for you
+                                        </p>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="shared-room"
+                                            name="shared-room" id="shared-room">
+                                        <label class="form-check-label" for="shared-room">
+                                            Shared Room
+                                        </label>
+                                        <p>
+                                            A place to sleep and common areas that are shared with other people.
+                                        </p>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="private-room"
+                                            name="private-room" id="private-room">
+                                        <label class="form-check-label" for="private-room">
+                                            Private room
+                                        </label>
+                                        <p>
+                                            Your own bedroom in accommodation or a hotel, plus other shared communal
+                                            spaces
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-only"></div>
+                            <div class="box-rooms">
+                                <h2>Rooms and beds</h2>
+                                <span>
+                                    Bedrooms
+                                </span>
+                                <div class="mini-rooms">
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="anyone"
+                                        id="bedrooms-anyone" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone"
+                                        for="bedrooms-anyone">Anyone</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-1"
+                                        id="bedrooms-1" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-1">1</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-2"
+                                        id="bedrooms-2" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-2">2</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-3"
+                                        id="bedrooms-3" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-3">3</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-4"
+                                        id="bedrooms-4" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-4">4</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-5"
+                                        id="bedrooms-5" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-5">5</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-6"
+                                        id="bedrooms-6" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-6">6</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-7"
+                                        id="bedrooms-7" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-7">7</label>
+                                    <input type="radio" class="btn-check" name="options-bedrooms" value="bedrrooms-8"
+                                        id="bedrooms-8" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bedrooms-8">8+</label>
+                                </div>
+                                <span>
+                                    Beds
+                                </span>
+                                <div class="mini-rooms">
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-anyone"
+                                        id="beds-anyone" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone"
+                                        for="beds-anyone">Anyone</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-1" id="beds-1"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-1">1</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-2" id="beds-2"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-2">2</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-3" id="beds-3"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-3">3</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-4" id="beds-4"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-4">4</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-5" id="beds-5"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-5">5</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-6" id="beds-6"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-6">6</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-7" id="beds-7"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-7">7</label>
+                                    <input type="radio" class="btn-check" name="options-beds" value="beds-8" id="beds-8"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="beds-8">8+</label>
+                                </div>
+                                <span>
+                                    Bathrooms
+                                </span>
+                                <div class="mini-rooms">
+                                    <input type="radio" class="btn-check" name="options-bathrooms"
+                                        value="bathrooms-anyone" id="bathrooms-anyone" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone"
+                                        for="bathrooms-anyone">Anyone</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-1"
+                                        id="bathrooms-1" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-1">1</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-2"
+                                        id="bathrooms-2" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-2">2</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-3"
+                                        id="bathrooms-3" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-3">3</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-4"
+                                        id="bathrooms-4" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-4">4</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-5"
+                                        id="bathrooms-5" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-5">5</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-6"
+                                        id="bathrooms-6" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-6">6</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-7"
+                                        id="bathrooms-7" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-7">7</label>
+                                    <input type="radio" class="btn-check" name="options-bathrooms" value="bathrooms-8"
+                                        id="bathrooms-8" autocomplete="off" checked>
+                                    <label class="btn btn-secondary btn-property anyone" for="bathrooms-8">8+</label>
+                                </div>
+                            </div>
+                            <div class="border-only"></div>
+                            <div>
+                                <h2>Type of property</h2>
+                                <div class="box-property">
+                                    <input type="checkbox" class="btn-check" name="option-house" value="house-property"
+                                        id="option-house" autocomplete="off">
+                                    <label class="btn btn-secondary btn-property" for="option-house">
+                                        <img src="styles/images/casa.jpg" alt="house">
+                                        House
+                                    </label>
+                                    <input type="checkbox" class="btn-check" name="option-appartment"
+                                        value="appartment-property" id="option-appartment" autocomplete="off">
+                                    <label class="btn btn-secondary btn-property" for="option-appartment">
+                                        <img src="styles/images/departamento.jpg" alt="appartment">
+                                        Appartment
+                                    </label>
+                                    <input type="checkbox" class="btn-check" name="option-guest" value="guest-property"
+                                        id="option-guest" autocomplete="off">
+                                    <label class="btn btn-secondary btn-property" for="option-guest">
+                                        <img src="styles/images/huespedes.jpg" alt="guest house">
+                                        Guest House
+                                    </label>
+                                    <input type="checkbox" class="btn-check" name="option-hotel" value="hotel-property"
+                                        id="option-hotel" autocomplete="off">
+                                    <label class="btn btn-secondary btn-property" for="option-hotel">
+                                        <img src="styles/images/hotel.jpg" alt="hotel">
+                                        Hotel
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="border-only"></div>
+                            <div>
+                                <h2>Services</h2>
+                                <span>
+                                    Basic services
+                                </span>
+                                <div>
+                                    <div class="wifi-kitchen">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="checked-wifi"
+                                                value="wifi-services" id="checked-wifi">
+                                            <label class="form-check-label" for="checked-wifi">
+                                                Wifi
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="checked-kitchen"
+                                                value="kitchen-services" id="checked-kitchen">
+                                            <label class="form-check-label" for="checked-kitchen">
+                                                Kitchen
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="washing-dryer">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="checked-washing"
+                                                value="washing-services" id="checked-washing">
+                                            <label class="form-check-label" for="checked-washing">
+                                                Washing machines
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="checked-dryer"
+                                                value="dryer-services" id="checked-dryer">
+                                            <label class="form-check-label" for="checked-dryer">
+                                                Dryer
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="air-heating">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="checked-air"
+                                                value="air-services" id="checked-air">
+                                            <label class="form-check-label" for="checked-air">
+                                                Air conditioning
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" name="checked-heating"
+                                                value="heating-services" id="checked-heating">
+                                            <label class="form-check-label" for="checked-heating">
+                                                Heating
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">Show More</a>
+                            </div>
+                            <div class="border-only"></div>
+                            <div>
+                                <h2>Booking options</h2>
+                                <div class="box-booking">
+                                    <div class="mini-box">
+                                        <span>
+                                            Immediate booking
+                                        </span>
+                                        <p>
+                                            Ads that do not require waiting for the host to accept the booking request
+                                        </p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="box-booking">
+                                    <div class="mini-box">
+                                        <span>
+                                            Unrestricted check-in times
+                                        </span>
+                                        <p>
+                                            Easy access to the property upon arrival
+                                        </p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="border-only"></div>
+                            <div class="box-accesibility">
+                                <h2>Accessibility features</h2>
+                                <p>
+                                    The host provided this information and Airbnb reviewed it.
+                                </p>
+                                <h3>Guest entrance and parking</h3>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="guest-entrance"
+                                                name="checked-entrance" id="checked-entrance">
+                                            <label class="form-check-label" for="checked-entrance">
+                                                Guest entrance without steps
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="entrance-81"
+                                                name="checked-81" id="checked-81">
+                                            <label class="form-check-label" for="checked-81">
+                                                Guests' entrance over 81 centimetres
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="parking"
+                                                name="checked-parking" id="checked-parking">
+                                            <label class="form-check-label" for="checked-parking">
+                                                Accessible parking area
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="pathway"
+                                                name="checked-pathway" id="checked-pathway">
+                                            <label class="form-check-label" for="checked-pathway">
+                                                Pathway to the guest entrance without steps
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">Show More</a>
+                            </div>
+                            <div class="border-only"></div>
+                            <div>
+                                <h2>First class accommodation</h2>
+                                <div class="box-booking">
+                                    <div class="mini-box">
+                                        <span>Superhost</span>
+                                        <p>
+                                            Stay with exceptional hosts
+                                        </p>
+                                        <a href="#">More information</a>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="box-booking">
+                                    <div class="mini-box">
+                                        <span>
+                                            Airbnb Plus
+                                        </span>
+                                        <p>
+                                            A selection of accommodation with verified quality and comfort.
+                                        </p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="border-only"></div>
+                            <div>
+                                <h2>Host language</h2>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="language-english"
+                                                name="language-english" id="language-english">
+                                            <label class="form-check-label" for="language-english">
+                                                English
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="language-french"
+                                                name="language-french" id="language-french">
+                                            <label class="form-check-label" for="language-french">
+                                                French
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="language-german"
+                                                name="language-german" id="language-german">
+                                            <label class="form-check-label" for="language-german">
+                                                German
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="language-italian"
+                                                name="language-italian" id="language-italian">
+                                            <label class="form-check-label" for="language-italian">
+                                                Italian
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">Show More</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Delete all</button>
+                        <button type="button" class="btn btn-primary">Show more accommodations</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-header">
+            <h1>challenge 1</h1>
+
+            <div class="btn-1">
+                <button class="loupe">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style="display: block; fill: none; height: 24px; width: 24px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                        <g fill="none">
+                            <path
+                                d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+                <div class="box-1">
+                    <p><span class="spn-1">where</span> you want to go...</p>
+                    <p class="text-btn"><span class="spn-2">to</span> any place . week (on any date)</p>
+                </div>
+                <button type="button" class="btn-2" data-toggle="modal" data-target="#exampleModalCenter">
+                    filters
+                </button>
+            </div>
+            <ul>
+                <li><img src="styles/images/artico.jpg" alt="artico">arctic</li>
+                <li><img src="styles/images/cabaña.jpg" alt="cabaña">hut</li>
+                <li><img src="styles/images/islas.jpg" alt="islas">islands</li>
+                <li><img src="styles/images/molinos.jpg" alt="molinos">mills</li>
+                <li><img src="styles/images/playas.jpg" alt="playas">beaches</li>
+                <li><img src="styles/images/surf.jpg" alt="surf">surf</li>
+            </ul>
+        </div>
     </header>
     <div class="main">
         <div class="square square-1">
-            <h2>Option 1</h2>
+            <h2>option 1</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.
@@ -27,7 +481,7 @@
             </p>
         </div>
         <div class="square square-2">
-            <h2>Option 2</h2>
+            <h2>option 2</h2>
             <p>
                 It is a long established fact that a reader will be distracted by the readable content of a page
                 when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
@@ -45,7 +499,7 @@
             </p>
         </div>
         <div class="square square-3">
-            <h2>Option 3</h2>
+            <h2>option 3</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.
@@ -54,7 +508,7 @@
             </p>
         </div>
         <div class="square square-4 desktop">
-            <h2>Option 4</h2>
+            <h2>option 4</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua.
@@ -63,11 +517,20 @@
     </div>
     <footer class="footer">
         <ul class="nav">
-            <li><a href="#">With</a></li>
-            <li><a href="#">Some</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="#">with</a></li>
+            <li><a href="#">some</a></li>
+            <li><a href="#">link</a></li>
         </ul>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
