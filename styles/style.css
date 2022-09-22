@@ -105,6 +105,11 @@ form h2 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: none;
+}
+
+.property-btn-check:checked+.btn-property {
+    background-color: #659c76 !important;
 }
 
 .wifi-kitchen {
