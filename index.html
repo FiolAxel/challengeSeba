@@ -30,7 +30,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="form-filter" method="POST" action="backend.php">
+                        <form id="form-filter" onsubmit="return loadDoc(event)" action="airbnb.php" method="POST">
                             <div class="box-price">
                                 <h2>Price range</h2>
                                 <span>
@@ -39,13 +39,15 @@
                                 <img>
                                 <div class="price-min-max">
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" id="floatingInput" name="min-price" placeholder="$">
-                                        <label for="floatingInput">min price</label>
+                                        <input type="number" class="form-control" id="min-price" name="min-price"
+                                            value="min-price" placeholder="$">
+                                        <label for="min-price">min price</label>
                                     </div>
                                     <div class="divider">_</div>
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" id="floatingInput" name="max-price" placeholder="$">
-                                        <label for="floatingInput">max price</label>
+                                        <input type="number" class="form-control" id="max-price" name="max-price"
+                                            value="max-price" placeholder="$">
+                                        <label for="max-price">max price</label>
                                     </div>
                                 </div>
                             </div>
@@ -195,8 +197,8 @@
                             <div>
                                 <h2>Type of property</h2>
                                 <div class="box-property">
-                                    <input type="checkbox" class="btn-check property-btn-check" name="option-house" value="option-house"
-                                        id="option-house" autocomplete="off">
+                                    <input type="checkbox" class="btn-check property-btn-check" name="option-house"
+                                        value="option-house" id="option-house" autocomplete="off">
                                     <label class="btn btn-secondary btn-property" for="option-house">
                                         <img src="styles/images/casa.jpg" alt="house">
                                         House
@@ -207,14 +209,14 @@
                                         <img src="styles/images/departamento.jpg" alt="appartment">
                                         Appartment
                                     </label>
-                                    <input type="checkbox" class="btn-check property-btn-check" name="option-guest" value="option-guest"
-                                        id="option-guest" autocomplete="off">
+                                    <input type="checkbox" class="btn-check property-btn-check" name="option-guest"
+                                        value="option-guest" id="option-guest" autocomplete="off">
                                     <label class="btn btn-secondary btn-property" for="option-guest">
                                         <img src="styles/images/huespedes.jpg" alt="guest house">
                                         Guest House
                                     </label>
-                                    <input type="checkbox" class="btn-check property-btn-check" name="option-hotel" value="option-hotel"
-                                        id="option-hotel" autocomplete="off">
+                                    <input type="checkbox" class="btn-check property-btn-check" name="option-hotel"
+                                        value="option-hotel" id="option-hotel" autocomplete="off">
                                     <label class="btn btn-secondary btn-property" for="option-hotel">
                                         <img src="styles/images/hotel.jpg" alt="hotel">
                                         Hotel
@@ -292,8 +294,8 @@
                                         </p>
                                     </div>
                                     <label class="switch" for="immediate-booking">
-                                        <input type="checkbox" name="immediate-booking"
-                                        value="immediate-booking" id="immediate-booking">
+                                        <input type="checkbox" name="immediate-booking" value="immediate-booking"
+                                            id="immediate-booking">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -307,8 +309,8 @@
                                         </p>
                                     </div>
                                     <label class="switch" for="unrestricted-booking">
-                                        <input type="checkbox" name="unrestricted-booking"
-                                        value="unrestricted-booking" id="unrestricted-booking">
+                                        <input type="checkbox" name="unrestricted-booking" value="unrestricted-booking"
+                                            id="unrestricted-booking">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -323,15 +325,15 @@
                                 <div>
                                     <div>
                                         <div>
-                                            <input class="form-check-input" type="checkbox" value="guest_entrance"
-                                                name="accesibility_guest_entrance" id="accesibility_guest_entrance">
+                                            <input class="form-check-input" type="checkbox" value="guest-entrance"
+                                                name="accesibility-guest-entrance" id="accesibility-guest-entrance">
                                             <label class="form-check-label" for="guest-entrance">
                                                 Guest entrance without steps
                                             </label>
                                         </div>
                                         <div>
-                                            <input class="form-check-input" type="checkbox" value="entrance_81"
-                                                name="accesibility_entrance_81" id="accesibility_entrance_81">
+                                            <input class="form-check-input" type="checkbox" value="entrance-81"
+                                                name="accesibility-entrance-81" id="accesibility-entrance-81">
                                             <label class="form-check-label" for="entrance-81">
                                                 Guests' entrance over 81 centimetres
                                             </label>
@@ -340,14 +342,14 @@
                                     <div>
                                         <div>
                                             <input class="form-check-input" type="checkbox" value="parking"
-                                                name="accesibility_parking" id="accesibility_parking">
+                                                name="accesibility-parking" id="accesibility-parking">
                                             <label class="form-check-label" for="parking">
                                                 Accessible parking area
                                             </label>
                                         </div>
                                         <div>
                                             <input class="form-check-input" type="checkbox" value="pathway"
-                                                name="accesibility_pathway" id="accesibility_pathway">
+                                                name="accesibility-pathway" id="accesibility-pathway">
                                             <label class="form-check-label" for="pathway">
                                                 Pathway to the guest entrance without steps
                                             </label>
@@ -368,8 +370,7 @@
                                         <a href="#">More information</a>
                                     </div>
                                     <label class="switch" for="superhost">
-                                        <input type="checkbox" name="superhost"
-                                        value="superhost" id="superhost">
+                                        <input type="checkbox" name="superhost" value="superhost" id="superhost">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -383,8 +384,7 @@
                                         </p>
                                     </div>
                                     <label class="switch" for="airbnb-plus">
-                                        <input type="checkbox" name="airbnb-plus"
-                                        value="airbnb-plus" id="airbnb-plus">
+                                        <input type="checkbox" name="airbnb-plus" value="airbnb-plus" id="airbnb-plus">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -521,6 +521,10 @@
             </p>
         </div>
     </div>
+    <div id="demo"></div>
+    <!-- <div class="ficha"> <strong>El precio es 99</strong><br>
+        <strong>Tipo de alojamiento: alojamiento completo</strong>
+    </div> -->
     <footer class="footer">
         <ul class="nav">
             <li><a href="#">with</a></li>
@@ -537,6 +541,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script>
+        console.log("paso1");
+        function loadDoc(e) {
+            var precio_minimo = document.getElementById("min-price").value;
+            var precio_maximo = document.getElementById("max-price").value;
+            var alojamiento_completo = document.getElementById("total-accomodation").checked;
+            var habitacion_compartida = document.getElementById("shared-room").checked;
+            var habitacion_privada = document.getElementById("private-room").checked;
+            // var habitaciones = document.getElementByName("options-bedrooms").value;
+            // var camas = document.getElementByName("options-beds").value;
+            // var banos = document.getElementByName("options-beds").value;
+            e.preventDefault();
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+            xhttp.open("POST", "airbnb.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            console.log("paso2");
+            var consulta = "min-price=" + precio_minimo + "&max-price=" + precio_maximo + "&total-accomodation=" + alojamiento_completo
+                + "&shared-room=" + habitacion_compartida + "&private-room=" + habitacion_privada;
+            // var consulta_2 = "options-bedrooms=" + habitaciones + "&options-beds=" + camas + "&options-bathrooms=" + banos;
+            xhttp.send(consulta);
+            return false;
+        }
+    </script>
 </body>
 
 </html>
