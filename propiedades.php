@@ -8,34 +8,34 @@ $propiedades = [
         "habitaciones" => 3,
         "camas" => 3,
         "banos" => 3,
-        "tipo_de_propiedad" => "departamento",
+        "tipo_de_propiedad" => "option-appartment",
         "servicios" => [
-            "wifi" => true,
-            "lavarropas" => true,
-            "aire_acondicionado" => true,
-            "cocina" => true,
-            "secadora" => false,
-            "calefaccion" => true
+            "wifi" => "true",
+            "cocina" => "true",
+            "lavarropas" => "true",
+            "secadora" => "false",
+            "aire_acondicionado" => "true",
+            "calefaccion" => "true"
         ],
         "opciones_de_reserva" => [
-            "reserva_inmediata" => true,
-            "acceso_inmediato" => false
+            "reserva_inmediata" => "true",
+            "acceso_inmediato" => "false"
         ],
         "accesibilidad" => [
-            "entrada_sin_escalones" => false,
-            "entrada_mas_de_81_centimetros" => false,
-            "estacionamiento_accesible" => true,
-            "entrada_sin_escalones" => false
+            "entrada_sin_escalones" => "false",
+            "entrada_mas_de_81_centimetros" => "false",
+            "estacionamiento_accesible" => "true",
+            "entrada_con_sendero" => "false"
         ],
         "alojamiento_de_primera_clase" => [
-            "super_anfitrion" => true,
-            "airbnb_plus" => false
+            "super_anfitrion" => "true",
+            "airbnb_plus" => "false"
         ],
         "lenguajes" => [
-            "ingles" => true,
-            "frances" => false,
-            "aleman" => false,
-            "italiano" => true
+            "ingles" => "true",
+            "frances" => "false",
+            "aleman" => "false",
+            "italiano" => "true"
         ],
     ],
     [
@@ -45,34 +45,34 @@ $propiedades = [
         "habitaciones" => 1,
         "camas" => 2,
         "banos" => 1,
-        "tipo_de_propiedad" => "hotel",
+        "tipo_de_propiedad" => "option-hotel",
         "servicios" => [
-            "wifi" => true,
-            "lavarropas" => false,
-            "aire_acondicionado" => true,
-            "cocina" => false,
-            "secadora" => true,
-            "calefaccion" => true
+            "wifi" => "true",
+            "lavarropas" => "false",
+            "aire_acondicionado" => "true",
+            "secadora" => "true",
+            "cocina" => "false",
+            "calefaccion" => "true"
         ],
         "opciones_de_reserva" => [
-            "reserva_inmediata" => true,
-            "acceso_inmediato" => true
+            "reserva_inmediata" => "true",
+            "acceso_inmediato" => "true"
         ],
         "accesibilidad" => [
-            "entrada_sin_escalones" => true,
-            "entrada_mas_de_81_centimetros" => true,
-            "estacionamiento_accesible" => true,
-            "entrada_sin_escalones" => false
+            "entrada_sin_escalones" => "true",
+            "entrada_mas_de_81_centimetros" => "true",
+            "estacionamiento_accesible" => "true",
+            "entrada_con_sendero" => "false"
         ],
         "alojamiento_de_primera_clase" => [
-            "super_anfitrion" => false,
-            "airbnb_plus" => true
+            "super_anfitrion" => "false",
+            "airbnb_plus" => "true"
         ],
         "lenguajes" => [
-            "ingles" => true,
-            "frances" => true,
-            "aleman" => true,
-            "italiano" => false
+            "ingles" => "true",
+            "frances" => "true",
+            "aleman" => "true",
+            "italiano" => "false"
         ],
     ],
     [
@@ -82,34 +82,34 @@ $propiedades = [
         "habitaciones" => 4,
         "camas" => 8,
         "banos" => 4,
-        "tipo_de_propiedad" => "casa",
+        "tipo_de_propiedad" => "option-house",
         "servicios" => [
-            "wifi" => true,
-            "lavarropas" => true,
-            "aire_acondicionado" => true,
-            "cocina" => true,
-            "secadora" => true,
-            "calefaccion" => true
+            "wifi" => "true",
+            "cocina" => "true",
+            "lavarropas" => "true",
+            "secadora" => "true",
+            "aire_acondicionado" => "true",
+            "calefaccion" => "true"
         ],
         "opciones_de_reserva" => [
-            "reserva_inmediata" => true,
-            "acceso_inmediato" => true
+            "reserva_inmediata" => "true",
+            "acceso_inmediato" => "true"
         ],
         "accesibilidad" => [
-            "entrada_sin_escalones" => false,
-            "entrada_mas_de_81_centimetros" => false,
-            "estacionamiento_accesible" => true,
-            "entrada_sin_escalones" => true
+            "entrada_sin_escalones" => "false",
+            "entrada_mas_de_81_centimetros" => "false",
+            "estacionamiento_accesible" => "true",
+            "entrada_con_sendero" => "true"
         ],
         "alojamiento_de_primera_clase" => [
-            "super_anfitrion" => true,
-            "airbnb_plus" => false
+            "super_anfitrion" => "true",
+            "airbnb_plus" => "false"
         ],
         "lenguajes" => [
-            "ingles" => true,
-            "frances" => false,
-            "aleman" => false,
-            "italiano" => false
+            "ingles" => "true",
+            "frances" => "false",
+            "aleman" => "false",
+            "italiano" => "false"
         ],
     ],
     [
@@ -119,34 +119,34 @@ $propiedades = [
         "habitaciones" => 2,
         "camas" => 2,
         "banos" => 2,
-        "tipo_de_propiedad" => "casa",
+        "tipo_de_propiedad" => "option-house",
         "servicios" => [
-            "wifi" => true,
-            "lavarropas" => true,
-            "aire_acondicionado" => true,
-            "cocina" => true,
-            "secadora" => false,
-            "calefaccion" => false
+            "wifi" => "true",
+            "cocina" => "true",
+            "lavarropas" => "true",
+            "secadora" => "false",
+            "aire_acondicionado" => "true",
+            "calefaccion" => "false"
         ],
         "opciones_de_reserva" => [
-            "reserva_inmediata" => false,
-            "acceso_inmediato" => true
+            "reserva_inmediata" => "false",
+            "acceso_inmediato" => "true"
         ],
         "accesibilidad" => [
-            "entrada_sin_escalones" => true,
-            "entrada_mas_de_81_centimetros" => false,
-            "estacionamiento_accesible" => false,
-            "entrada_sin_escalones" => false
+            "entrada_sin_escalones" => "true",
+            "entrada_mas_de_81_centimetros" => "false",
+            "estacionamiento_accesible" => "false",
+            "entrada_con_sendero" => "false"
         ],
         "alojamiento_de_primera_clase" => [
-            "super_anfitrion" => false,
-            "airbnb_plus" => true
+            "super_anfitrion" => "false",
+            "airbnb_plus" => "true"
         ],
         "lenguajes" => [
-            "ingles" => false,
-            "frances" => true,
-            "aleman" => true,
-            "italiano" => true
+            "ingles" => "false",
+            "frances" => "true",
+            "aleman" => "true",
+            "italiano" => "true"
         ],
     ],
     [
@@ -156,34 +156,34 @@ $propiedades = [
         "habitaciones" => 5,
         "camas" => 10,
         "banos" => 10,
-        "tipo_de_propiedad" => "casa de huespedes",
+        "tipo_de_propiedad" => "option-guest",
         "servicios" => [
-            "wifi" => true,
-            "lavarropas" => true,
-            "aire_acondicionado" => true,
-            "cocina" => true,
-            "secadora" => false,
-            "calefaccion" => true
+            "wifi" => "true",
+            "cocina" => "true",
+            "lavarropas" => "true",
+            "secadora" => "false",
+            "aire_acondicionado" => "true",
+            "calefaccion" => "true"
         ],
         "opciones_de_reserva" => [
-            "reserva_inmediata" => false,
-            "acceso_inmediato" => false
+            "reserva_inmediata" => "false",
+            "acceso_inmediato" => "false"
         ],
         "accesibilidad" => [
-            "entrada_sin_escalones" => false,
-            "entrada_mas_de_81_centimetros" => false,
-            "estacionamiento_accesible" => false,
-            "entrada_sin_escalones" => true
+            "entrada_sin_escalones" => "false",
+            "entrada_mas_de_81_centimetros" => "false",
+            "estacionamiento_accesible" => "false",
+            "entrada_con_sendero" => "true"
         ],
         "alojamiento_de_primera_clase" => [
-            "super_anfitrion" => true,
-            "airbnb_plus" => false
+            "super_anfitrion" => "true",
+            "airbnb_plus" => "false"
         ],
         "lenguajes" => [
-            "ingles" => true,
-            "frances" => true,
-            "aleman" => false,
-            "italiano" => false
+            "ingles" => "true",
+            "frances" => "true",
+            "aleman" => "false",
+            "italiano" => "false"
         ],
     ],
     [
@@ -193,34 +193,34 @@ $propiedades = [
         "habitaciones" => 2,
         "camas" => 6,
         "banos" => 4,
-        "tipo_de_propiedad" => "departamento",
+        "tipo_de_propiedad" => "option-appartment",
         "servicios" => [
-            "wifi" => true,
-            "lavarropas" => true,
-            "aire_acondicionado" => true,
-            "cocina" => true,
-            "secadora" => true,
-            "calefaccion" => true
+            "wifi" => "true",
+            "cocina" => "true",
+            "lavarropas" => "true",
+            "secadora" => "true",
+            "aire_acondicionado" => "true",
+            "calefaccion" => "true"
         ],
         "opciones_de_reserva" => [
-            "reserva_inmediata" => true,
-            "acceso_inmediato" => true
+            "reserva_inmediata" => "true",
+            "acceso_inmediato" => "true"
         ],
         "accesibilidad" => [
-            "entrada_sin_escalones" => true,
-            "entrada_mas_de_81_centimetros" => true,
-            "estacionamiento_accesible" => true,
-            "entrada_sin_escalones" => true
+            "entrada_sin_escalones" => "true",
+            "entrada_mas_de_81_centimetros" => "true",
+            "estacionamiento_accesible" => "true",
+            "entrada_con_sendero" => "true"
         ],
         "alojamiento_de_primera_clase" => [
-            "super_anfitrion" => true,
-            "airbnb_plus" => true
+            "super_anfitrion" => "true",
+            "airbnb_plus" => "true"
         ],
         "lenguajes" => [
-            "ingles" => true,
-            "frances" => true,
-            "aleman" => true,
-            "italiano" => true
+            "ingles" => "true",
+            "frances" => "true",
+            "aleman" => "true",
+            "italiano" => "true"
         ],
     ]
 ];
